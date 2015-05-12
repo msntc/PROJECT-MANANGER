@@ -1,0 +1,169 @@
+<!doctype html>
+<html lang="en">
+	<head>
+		<meta charset="UTF-8">
+		<meta name="viewport" content="width=device-width, initial-scale=1, maximum-scale=1, user-scalable=no">
+		<title>CRIM WEB BUILDER 1.0</title>
+		<link rel="stylesheet" href="css/bootstrap.min.css">
+		<link rel="stylesheet" href="css/setting.css">
+		<link rel="stylesheet" href="css/jquery-ui.css">
+		<link href="css/sb-admin.css" rel="stylesheet">
+		<link href="css/plugins/morris.css" rel="stylesheet">
+		<link href="font-awesome/css/font-awesome.min.css" rel="stylesheet" type="text/css">
+		<style type="text/css">
+			@import url(http://fonts.googleapis.com/earlyaccess/nanumgothic.css);
+			body{font-family: 'Nanum Gothic', serif;}
+			.td-head{background-color:#42c4e5;color:#FFF;}
+		</style>
+	</head>
+	<body>
+<div id="wrapper">
+
+        <!-- Navigation -->
+        <nav class="navbar navbar-inverse navbar-fixed-top" role="navigation">
+            <!-- Brand and toggle get grouped for better mobile display -->
+            <div class="navbar-header">
+                <button type="button" class="navbar-toggle" data-toggle="collapse" data-target=".navbar-ex1-collapse">
+                    <span class="sr-only">Toggle navigation</span>
+                    <span class="icon-bar"></span>
+                    <span class="icon-bar"></span>
+                    <span class="icon-bar"></span>
+                </button>
+                <a class="navbar-brand" href="index.html">크림씨앤엠 관리 프로그램</a>
+            </div>
+            <!-- Top Menu Items -->
+            <ul class="nav navbar-right top-nav">
+                <li class="dropdown">
+                    <a href="#" class="dropdown-toggle" data-toggle="dropdown"><i class="fa fa-bell"></i> <b class="caret"></b></a>
+                    <ul class="dropdown-menu alert-dropdown">
+                        <li>
+                            <a href="#">신규 수정요청 <span class="label label-default">수정사항</span></a>
+                        </li>
+                        <li class="divider"></li>
+                        <li>
+                            <a href="#">더 보기</a>
+                        </li>
+                    </ul>
+                </li>
+                <li class="dropdown">
+                    <a href="#" class="dropdown-toggle" data-toggle="dropdown"><i class="fa fa-user"></i> 관리자 <b class="caret"></b></a>
+                    <ul class="dropdown-menu">
+                        <li>
+                            <a href="#"><i class="fa fa-fw fa-gear"></i> 설정</a>
+                        </li>
+                        <li class="divider"></li>
+                        <li>
+                            <a href="#"><i class="fa fa-fw fa-power-off"></i> 로그아옷</a>
+                        </li>
+                    </ul>
+                </li>
+            </ul>
+            <!-- Sidebar Menu Items - These collapse to the responsive navigation menu on small screens -->
+            <div class="collapse navbar-collapse navbar-ex1-collapse">
+                <ul class="nav navbar-nav side-nav">
+                    <li>
+                        <a href="index.html"><i class="fa fa-fw fa-dashboard"></i> 관리 메인</a>
+                    </li>
+					<li>
+                        <a href="javascript:;" data-toggle="collapse" data-target="#menu00"><i class="fa fa-cubes"></i> 프로젝트 관리<i class="fa fa-fw fa-caret-down"></i></a>
+                        <ul id="menu00" class="collapse">
+                            <li>
+                                <a href="#">프로젝트 등록</a>
+                            </li>
+                            <li>
+                                <a href="#">프로젝트 전체</a>
+                            </li>
+                        </ul>
+                    </li>
+                    <li>
+                        <a href="javascript:;" data-toggle="collapse" data-target="#menu01"><i class="fa fa-star"></i> 업체 관리<i class="fa fa-fw fa-caret-down"></i></a>
+                        <ul id="menu01" class="collapse">
+                            <li>
+                                <a href="#">업체 등록</a>
+                            </li>
+                            <li>
+                                <a href="#">업체 전체</a>
+                            </li>
+                        </ul>
+                    </li>
+					 <li>
+                        <a href="javascript:;" data-toggle="collapse" data-target="#menu02"><i class="fa fa-users"></i>  운영자 관리<i class="fa fa-fw fa-caret-down"></i></a>
+                        <ul id="menu02" class="collapse">
+                            <li>
+                                <a href="#">운영자 추가</a>
+                            </li>
+                            <li>
+                                <a href="#">운영자 전체</a>
+                            </li>
+                        </ul>
+                    </li>
+					<li>
+                        <a href="javascript:;" data-toggle="collapse" data-target="#menu03"><i class="fa fa-pencil-square-o"></i> 수정 요청<i class="fa fa-fw fa-caret-down"></i></a>
+                        <ul id="menu03" class="collapse">
+                            <li>
+                                <a href="#">수정 요청 추가</a>
+                            </li>
+                            <li>
+                                <a href="#">수정 요청 전체</a>
+                            </li>
+                        </ul>
+                    </li>
+					<li>
+                        <a href="javascript:;" data-toggle="collapse" data-target="#menu04"><i class="fa fa-pencil-square-o"></i> Q&A<i class="fa fa-fw fa-caret-down"></i></a>
+                        <ul id="menu04" class="collapse">
+                            <li>
+                                <a href="#">자주하는 질문</a>
+                            </li>
+                            <li>
+                                <a href="#">가이드 파일</a>
+                            </li>
+                        </ul>
+                    </li>
+                </ul>
+            </div>
+            <!-- /.navbar-collapse -->
+        </nav>
+
+        <div id="page-wrapper">
+
+            <div class="container-fluid">
+
+                <!-- Page Heading -->
+                <div class="row">
+                    <div class="col-md-12">
+                        <h1 class="page-header">
+                            프로젝트 보기
+                        </h1>
+						<!-- PROJECT VIEW -->
+						<div class="row">
+								<div class="col-lg-12">
+								<div class="panel panel-default">
+								<div class="panel-heading">프로젝트 보기 </div>
+								<div class="table-responsive">
+									<table class="table  table-bordered">
+										<tbody>
+											<tr>
+												<td> 창의와 날개 </td>
+												<td> FTP 변경 및 사이트 파일 안왔음 </td>
+												<td> 옴바</td>
+											</tr>
+										</tbody>
+									</table>
+								</div>
+								</div>
+						   </div>
+						   </div>
+						<!-- PROJECT VIEW -->
+
+
+        </div>
+        <!-- /#page-wrapper -->
+    </div>
+    <!-- /#wrapper -->
+	<script src="js/jquery-1.11.3.min.js"></script>
+	<script src="js/bootstrap.min.js"></script>
+	<script src="js/jquery-ui.js"></script>
+	 <script>
+  </script>
+	</body>
+</html>
